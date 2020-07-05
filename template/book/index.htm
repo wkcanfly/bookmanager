@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-29 16:26:36
+ * @LastEditTime: 2020-07-05 15:01:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /python_project/bookmanager/template/index.htm
+--> 
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <!-- <a href="http://" target="_blank" rel="noopener noreferrer">{{ name }}约么！？</a> -->
+        
+        <div id='app'>
+            {{ message }}
+            <ul>
+                {% for book in books %}
+                <li>{{book}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+    <script type="text/javascript">
+        let app = new Vue(
+            {
+                el:"#app",
+                data:{
+                    message:"hello world!"
+                }
+            }
+        )
+    </script>
+</html>
